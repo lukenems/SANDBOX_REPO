@@ -6,17 +6,17 @@ Stage 1
 
 Setup the repo and file structure, install and configure Express, and get a basic server running.
 
- [] Repo (your artifact) is created on GitHub
- [] Repo follows a conventional file structure for an Express.js app:
- []     package.json: standard for any Node.js app; includes package info and lists dependencies
- []     server.js: your Express server, with all routes defined
- []     views/: for storing your EJS HTML templates
- []     public/: for storing static files like CSS and images
- []     README.md: includes overview of your repo
- [] Express server can be started with $ node server.js
- [] Server renders a page at the root route (/)
- [] All package dependencies are defined in package.json
- [] The artifact produced is properly licensed, preferably with the MIT license
+ [] Repo (your artifact) is created on GitHub  
+ [] Repo follows a conventional file structure for an Express.js app:  
+ []     package.json: standard for any Node.js app; includes package info and lists dependencies  
+ []     server.js: your Express server, with all routes defined  
+ []     views/: for storing your EJS HTML templates  
+ []     public/: for storing static files like CSS and images  
+ []     README.md: includes overview of your repo  
+ [] Express server can be started with $ node server.js  
+ [] Server renders a page at the root route (/)  
+ [] All package dependencies are defined in package.json  
+ [] The artifact produced is properly licensed, preferably with the MIT license  
 
 Stage 2
 
