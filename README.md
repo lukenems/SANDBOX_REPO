@@ -97,4 +97,4 @@ Refactor and improve the organization of your code. Use EJS’s “includes” f
  [] Artist view (/artists/:artist_id) uses an artist album include for each album.
  [] Artist album include is kept in the file views/artists/album.ejs.
  [] Album view (/albums/:album_id) uses an album song for each album.
- [] Album song include is kept in the file views/albums/song.ejs.
+ [] Album song include is kept in the file views/albums/song.ejs. 
