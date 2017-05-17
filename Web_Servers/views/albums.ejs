@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Albums</title>
+</head>
+
+<body>
+  <div class="container">
+    <%- include('partials/header') %>
+    <div class= "jumbotron">
+  <div>
+    <% albums.forEach(function(album){ %>
+      <div>
+        <%= album.title %>
+        <%= album.artist_id %>
+      </div>
+    <% }) %>
+  </div>
+</div>
+</div>
+</body>
+
+</html>
