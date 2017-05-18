@@ -2,16 +2,14 @@
 
 
 <body>
-  <h1>Artists</h1>
+  <h1>AlbumName</h1>
   <div class="container">
     <%- include('partials/header') %>
     <div class= "jumbotron">
   <div>
-    <% artists.forEach(function(artist){ %>
-      <div>
-        <%= artist.name %>
-      </div>
-    <% }) %>
+    <%= albums.title %>
+    <%= albums.year %>
+
   </div>
   </div>
 </div>
