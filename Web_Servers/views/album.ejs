@@ -4,31 +4,21 @@
   <body>
 
     <div class="container">
-      <%- include('partials/header') %>
+      <%- include('layout/header') %>
 
       <div class= "jumbotron">
-        <% albums.forEach(function(album){
-          var songArr = []
-          var songCount = songs.forEach(function(songCount) {
-            for (i = 0; i < songs.length; i++) {
-              if (songCount.album_id === album.id){
-                songArr.push(songCount[i])
-                console.log(songArr)
-                return songArr
-              }
-          }
-          })
+        <% album.forEach(function(album, i){
           var artist = artists.find(function(artist) {
             return artist.id === album.artist_id
           })
-          %>
+        %>
         <div>
-          <%= albums.title %>
-          <%= albums.year %>
+          <h1><%= album.title %></h1>
+          <h2><%= album.year %></h2>
           <p><a href="../artists/<%= artist.id %>"><%= artist.name %></a></p>
-          <p>Number of songs: <%= songArr.length %></p>
+          <p>Number of songs: <%= songCount %></p>
+          <% }) %>
         </div>
-        <% }) %>
       </div>
 
     </div>

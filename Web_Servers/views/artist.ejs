@@ -3,18 +3,20 @@
 
 <body>
   <div class="container">
-    <%- include('partials/header') %>
+    <%- include('layout/header') %>
     <h1><%= artist.name %></h1>
     <div class= "jumbotron">
       <%#forEach() acts as a for loop and the i represents the current iteration%>
       <% album.forEach(function(album, i){ %>
         <div class="row">
-          <div class="albumImage well col-xs-6">
-            <p>Name: <a href="../albums/<%= album.id %>"><%= album.title %></a></p>
-            <p>Year: <%= album.year %></p>
+          <div class="albumImage well col-xs-6 text-center ">
+            <img class="img-responsive center-block" src="http://300.dgljamaica.com/assets/images/unavailable_1.jpg" width="220" height="220">
+            <p>Title: <a href="../albums/<%= album.id %>"><%= album.title %></a></p>
+
           </div>
 
           <div class="info col-xs-6">
+            <p>Year: <%= album.year %></p>
             <p>Album Genre: <%= artist.genre %></p>
             <p>Number of songs: <%= songCount[i] %></p>
           </div>
