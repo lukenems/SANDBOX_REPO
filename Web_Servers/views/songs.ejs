@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Songs</title>
+</head>
+
+<body>
+  <div class="container">
+    <%- include('partials/header') %>
+    <div class= "jumbotron">
+    <% songs.forEach(function(song){ %>
+    <div class="row">
+      <div class="col-xs-6">
+        <p> <%= song.title %> </p>
+      </div>
+      <div class="col-xs-6">
+         <p>Track Num: <%= song.track_no %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+</body>
+
+</html>

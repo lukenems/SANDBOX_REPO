@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MusicPlayer</title>
+</head>
+
+<body>
+  <div class="container">
+    <%- include('partials/header') %>
+    <h2 class="text-center">Current Artists</h2>
+
+    <div class= "jumbotron">
+
+      <div class="artists row">
+        <% artists.forEach(function(artists){ %>
+
+          <div class="artist_image well col-xs-6">
+            <p>Hello</p>
+          </div>
+          <div class="album-name well col-xs-6">
+            <p><a href="artists/<%= artists.id %>"><%= artists.name %></a></p>
+            <br>
+            <br>
+            <p>Genre:<%= artists.genre %></p>
+          </div>
+          <!-- <div class="genre well col-xs-4">
+
+          </div> -->
+        <% }) %>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
