@@ -52,8 +52,10 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
+
     res.render('index', {
       artists: artists,
+      albums: albums,
     })
 })
 
@@ -69,15 +71,30 @@ app.get('/albums', function(req, res){
 
 app.get('/albums/:id', function(req, res){
   var id = parseInt(req.params.id) - 1;
+  var artistAlbums = albumsForArtist(id)
+  //array for all individual artist albums
+
+  var albumSongs = []
+  for (var i=0; i < artistAlbums.length; i++) {
+    // albumSongs is using both functions
+    albumSongs.push(songsForAlbum(artistAlbums[i].id))
+  }
+
+  var album = albums.filter( x => {
+    console.log( x )
+    return x.id === id + 1
+  })
+
+  var artist = artists.filter( artist => artist.id === album.artist_id )
   var artistName = artistForAlbum(id)
     res.render('album', {
-      albums: albums[id],
-      albums: albums,
+      album: albums[id],
+      album: album,
       artist: artistName,
       artists: artists,
-      songs: songs,
+      songCount: albumSongs,
     })
-    console.log(artists);
+    console.log('song count ' + albumSongs);
 })
 
 

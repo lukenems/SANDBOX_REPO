@@ -7,10 +7,14 @@
 
 <body>
   <div class="container">
-    <%- include('partials/header') %>
+    <%- include('layout/header') %>
     <h2 class="text-center">Album Collection</h2>
 
     <div class= "jumbotron">
+      <div class="row">
+        <h2 class="col-xs-8">Album</h2>
+        <h2 class="col-xs-4">Artist</h2>
+      </div>
       <div class="row">
     <%# nests a find function in this album loop to match artist id in artists array with artist_id in albums array. we save that value into artist and input artist into href and .name %>
     <% albums.forEach(function(album){
@@ -19,7 +23,6 @@
         for (i = 0; i < songs.length; i++) {
           if (songCount.album_id === album.id){
             songArr.push(songCount[i])
-            console.log(songArr)
             return songArr
           }
       }
@@ -28,14 +31,13 @@
         return artist.id === album.artist_id
       })
       %>
-      <div class = "col-xs-6">
-        <h2>Album</h2>
+      <div class = "col-xs-8 well">
         <p><a href="../albums/<%= album.id %>"><%= album.title %></a></p>
+        <p>Songs: <%= songArr.length %></p>
       </div>
-      <div class = "col-xs-6">
-        <h2>Artist</h2>
+      <div class = "col-xs-4 well">
         <p><a href="../artists/<%= artist.id %>"><%= artist.name %></a></p>
-        <p>Number of songs: <%= songArr.length %></p>
+
       </div>
     <% }) %>
   </div>

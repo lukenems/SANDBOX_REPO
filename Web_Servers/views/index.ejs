@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>MusicPlayer</title>
+    <title>Music Player</title>
+    <link rel="stylesheet" type="text/css" href="../../public/stylesheet.css">
 </head>
 
 <body>
   <div class="container">
-    <%- include('partials/header') %>
+    <%- include('layout/header') %>
     <h2 class="text-center">Current Artists</h2>
 
     <div class= "jumbotron">
@@ -15,8 +16,8 @@
       <div class="artists row">
         <% artists.forEach(function(artists){ %>
 
-          <div class="artist_image well col-xs-6">
-            <p>Hello</p>
+          <div class="artist_image col-xs-6">
+            <img class="img-responsive center-block" src="http://300.dgljamaica.com/assets/images/unavailable_1.jpg" width="220" height="220">
           </div>
           <div class="album-name well col-xs-6">
             <p><a href="artists/<%= artists.id %>"><%= artists.name %></a></p>
@@ -24,9 +25,6 @@
             <br>
             <p>Genre:<%= artists.genre %></p>
           </div>
-          <!-- <div class="genre well col-xs-4">
-
-          </div> -->
         <% }) %>
     </div>
 </div>
